@@ -1,0 +1,25 @@
+
+This will create an image "jencker," which is a jenkins image with a built-in docker
+host.
+
+* Combination of jenkins and docker 
+
+
+
+- [[https://github.com/docker-library/docker/blob/f7ee50684c7ec92ce885c8b93a4ed22ddbb660f8/1.11/Dockerfile][docker]]
+- [[https://github.com/jenkinsci/docker/blob/373c45a59fbaa2b15e77408425205b158352480e/Dockerfile][jenkins]]
+
+
+* Build
+
+#+BEGIN_SRC sh
+ docker build -t jencker .
+#+END_SRC
+
+
+* Running
+
+#+BEGIN_SRC 
+docker run -v "home:/var/jenkins_home" -P jencker 
+#+END_SRC
+
